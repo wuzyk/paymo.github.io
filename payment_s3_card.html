@@ -1,0 +1,380 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>payment_card</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="styles/build.css"/>
+  </head>
+  <body>
+    <div class="sidemenu">
+      <div class="sidemenu-wrapper">
+        <div class="sidemenu-close-button"></div>
+        <div class="sidemenu-content">
+          <ul class="sidemenu-nav">
+            <li>ОПЛАТА УСЛУГ
+              <ul>
+                <li><a href="providers.html">Коммунальные услуги</a></li>
+                <li><a href="providers.html">Оплата кредитов</a></li>
+                <li><a href="payment_s3_card.html">Переводы с карты на карту</a></li>
+                <li><a href="payment_s3_account.html">Переводы с карты на счет</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="sidemenu-nav">
+            <li>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sidemenu-footer">
+          <div class="sidemenu-phone">8 (800) 555-3115</div>
+          <div>info@paymo.ru</div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="menu-button"></div>
+      <a href="index.html" class="header-logo"></a>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item" data-src="./images/slides/pay-rent.jpg">
+            <h1 class="title">Плати за квартиру<br/> в 2 клика</h1>
+          </div>
+          <div class="item" data-src="./images/slides/pay-loan.jpg">
+            <h1 class="title">Погащай кредит<br/> из дома</h1>
+          </div>
+          <div class="item" data-src="./images/slides/card-transfer.jpg">
+            <h1 class="title">Переводи деньги<br/> на любую карту</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section main main__haslogo">
+      <div class="provider-logo">
+        <div class="provider-logo-wrapper">
+          <img src="images/providers/groups/card-to-card.png" alt=""/>
+        </div>
+      </div>
+      <div class="payment">
+        <h1>Перевод <br> с карты на карту </h1>
+
+        <form class="payment-form" action="">
+          <div class="field-group">
+            <div class="field field__middle">
+              <label for="phoneNumber">Ваш номер телефона:</label>
+              <div class="field-input">
+                <input type="tel" name="phoneNumber" placeholder="+7 (000) 000-00-00" data-val="true" data-val-required="Введите номер телефона" data-val-regex="Введене неверный номер телефона" data-val-regex-pattern="^(\+?7|8)\d{10}$"/>
+              </div>
+              <div class="field-error" data-valmsg-for="phoneNumber" data-valmsg-replace="true"></div>
+              <div class="field-description">
+                Номер телефона нужен для быстрого и корректного поиска транзакции нашей службой технической поддержки
+              </div>
+            </div>
+          
+            <div class="field field__middle">
+              <label for="email">Ваш email:</label>
+              <div class="field-input">
+                <input type="text" name="email" placeholder="ivanpetrov@gmail.com" data-val="true" data-val-required="Введите e-mail" data-val-email="Введен неверный e-mail"/>
+              </div>
+              <div class="field-error" data-valmsg-for="email" data-valmsg-replace="true"></div>
+              <div class="field-description">
+                На этот адрес мы отправим Вам информацию об оплате
+              </div>
+            </div>
+          </div>
+
+          <h2>Карта отправителя</h2>
+
+          <div class="payment-sender">
+            <div class="payment-info">Данные Вашей банковской карты передаются по защищенному <br> протоколу в банк-эквайер в зашифрованном виде</div>
+          
+            <div class="payment-cards">
+              <div class="payment-cards-buttons">
+                <div class="payment-cards-button payment-cards-button__my">Мои карты</div>
+                <div class="payment-cards-button payment-cards-button__new">Новая карта</div>
+              </div>
+          
+              <div class="payment-card payment-card__face payment-card__visa">
+                <div class="payment-card_logo-ps"><img src="images/cards/visa.png"/></div>
+          
+                <div class="payment-card_saved">
+                  <div class="field field__label field__card-number">
+                    <label for="cardNumber">Номер карты:</label>
+                    <div class="field-value">548674******8253</div>
+                  </div>
+                  <div class="field field__label">
+                    <label for="cardNumber">Имя и фамилия (как указано на карте):</label>
+                    <div class="field-value">VALERIAN ANTONOV</div>
+                  </div>
+                  <div class="field field__label field__inline">
+                    <label for="cardNumber">Срок действия:</label>
+                    <div class="field-value">03/19</div>
+                  </div>
+                  <img class="payment-card_logo-bank" src="images/cards/alfa-bank.png"/>
+                </div>
+          
+                <div class="payment-card_form">
+                  <div class="field field__card-number">
+                    <label for="cardNumber">Номер карты:</label>
+                    <div class="field-input">
+                      <input type="tel" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" minLength="13" maxLength="23" data-val="true" data-val-required data-val-luhn= data-val-minlength/>
+                    </div>
+                  </div>
+          
+                  <div class="field">
+                    <label for="cardHolder">Имя и фамилия (как указано на карте):</label>
+                    <div class="field-input">
+                      <input type="text" name="cardHolder" id="cardHolder" placeholder="VALERIAN ANTONOV" />
+                    </div>
+                  </div>
+          
+                  <div class="field field__inline">
+                    <label>Срок действия:</label>
+                    <div class="field-input">
+                      <select name="" title="Месяц">
+                        <option value="">Январь</option>
+                        <option value="">Февраль</option>
+                        <option value="">Март</option>
+                        <option value="">Апрель</option>
+                        <option value="">Май</option>
+                        <option value="">Июнь</option>
+                        <option value="">Июль</option>
+                        <option value="">Август</option>
+                        <option value="">Сентябрь</option>
+                        <option value="">Октябрь</option>
+                        <option value="">Ноябрь</option>
+                        <option value="">Декабрь</option>
+                      </select>
+                      <select name="" title="Год">
+                        <option value="">2016</option>
+                        <option value="">2015</option>
+                        <option value="">2014</option>
+                        <option value="">2013</option>
+                        <option value="">2012</option>
+                        <option value="">2011</option>
+                        <option value="">2010</option>
+                        <option value="">2009</option>
+                        <option value="">2008</option>
+                        <option value="">2007</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="payment-card payment-card__reverse">
+                <div class="field">
+                  <div class="field-wrapper">
+                    <label for="cvv">CVC/CVV2:</label>
+                    <div class="field-input">
+                      <input type="password" name="cvv" id="cvv" placeholder="•••" maxlength="3" minlength="3" data-val="true" data-val-required data-val-minlength/>
+                    </div>
+                  </div>
+                  <div class="field-description">3 последние цифры на оборотной стороне карты</div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="certificates-list">
+              <div class="certificates-item">
+                <img src="./images/certificates/mastercard.png" alt="" />
+              </div>
+              <div class="certificates-item">
+                <img src="./images/certificates/thawte.png" alt="" />
+              </div>
+              <div class="certificates-item">
+                <img src="./images/certificates/pci.png" alt="" />
+              </div>
+              <div class="certificates-item">
+                <img src="./images/certificates/visa.png" alt="" />
+              </div>
+            </div>
+          
+            <div class="user-cards">
+              <div class="user-cards__close-button"></div>
+              <div class="user-cards-container">
+                <div class="user-cards-list">
+                  <div class="user-cards-item">
+                    <div class="user-cards-item_logo-ps"><img src="images/cards/visa.png" alt=""></div>
+                    <div class="user-cards-item_logo"><img src="images/cards/alfa-bank.png" alt=""></div>
+                    <div class="user-cards-item_title">548674******8253</div>
+                  </div>
+                  <div class="user-cards-item">
+                    <div class="user-cards-item_logo-ps"><img src="images/cards/visa.png" alt=""></div>
+                    <div class="user-cards-item_logo"><img src="images/cards/alfa-bank.png" alt=""></div>
+                    <div class="user-cards-item_title">548674******8158</div>
+                  </div>
+                  <div class="user-cards-item">
+                    <div class="user-cards-item_logo-ps"><img src="images/cards/visa.png" alt=""></div>
+                    <div class="user-cards-item_logo"><img src="images/cards/alfa-bank.png" alt=""></div>
+                    <div class="user-cards-item_title">548674******8158</div>
+                  </div>
+                  <div class="user-cards-item">
+                    <div class="user-cards-item_logo-ps"><img src="images/cards/visa.png" alt=""></div>
+                    <div class="user-cards-item_logo"><img src="images/cards/alfa-bank.png" alt=""></div>
+                    <div class="user-cards-item_title">548674******8158</div>
+                  </div>
+                </div>
+                <div class="button-panel">
+                  <div class="button">Добавить новую карту</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-recipient">
+            <h2>Карта получателя</h2>
+            <div class="payment-card payment-card__recipient payment-card__visa">
+              <div class="field field__master field__card-number">
+                <label for="recipientCardNumber">Номер карты:</label>
+                <div class="field-input">
+                  <input type="text" name="recipientCardNumber" id="recipientCardNumber" placeholder="0000 0000 0000 0000" minLength="13" maxLength="23" data-val="true" data-val-required data-val-luhn= data-val-minlength/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group field-group__amount">
+            <div class="field field__amount">
+              <label for="amount">Сумма платежа:</label>
+              <div class="field-input">
+                <input type="number" name="amount" id="amount" placeholder="00.00" data-val="true" data-val-required>
+                <div class="field-currency">₽</div>
+              </div>
+              <div class="field-description">Коммисия сервиса: 2%</div>
+            </div>
+            <div class="field field__amount">
+              <label for="receivedAmount">Будет зачислено:</label>
+              <div class="field-input">
+                <input type="number" name="receivedAmount" id="receivedAmount" placeholder="00.00">
+                <div class="field-currency">₽</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-agreement">
+            <div class="field field__checkbox">
+              <input name="agreement" id="agreement" type="checkbox" checked="checked" data-val="true" data-val-required/>
+              <label for="agreement">Я согласен с <a href="#" target="_blank">условиями использования</a> сервиса</label>
+            </div>
+          </div>
+
+          <div class="button-panel">
+            <div class="button-wrapper"><a href="providers.html" class="button button__back">Редактировать платеж</a></div>
+            <div class="button-wrapper"><input class="button" type="submit" value="Перевести деньги" /></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="section features">
+      <div class="wrapper">
+        <div class="features-list">
+          <div class="features-item features-item__invoices">Следите за новыми счетами <br> в личном кабинете</div>
+          <div class="features-item features-item__notifications">Устанавливайте уведомления, <br> чтобы не пропустить платеж</div>
+          <div class="features-item features-item__mobile">Пользуйтесь PAYMO <br> с мобильных телефонов и планшетов</div>
+        </div>
+      </div>
+    </div>
+    <div class="section support">
+      <div class="wrapper">
+        <div class="support-content">
+          <h2>Возникли вопросы?</h2>
+          <div class="support-message">Позвоните нам — наша служба поддержки работает круглосуточно</div>
+          <div class="support-phone">8 (800) 555-3115</div>
+          <div class="support-email">info@paymo.ru</div>
+        </div>
+        <div class="support-image">
+          <img src="./images/support.jpg" alt="Служба поддержки" />
+        </div>
+      </div>
+    </div>
+    <div class="section pay-status">
+      <div class="wrapper">
+        <div class="pay-status-title">
+          <h2>Ни один платеж <br> не потеряется</h2>
+        </div>
+        <div class="pay-status-form">
+          <div>Проверьте статус платежа по его номеру:</div>
+          <p><small>Вы можете найти номер платежа в подтверждающем<br/> электронном письме, которое получили после оплаты.</small></p>
+          <form>
+            <input type="text" name="transactionId" placeholder="Номер платежа" />
+            <input type="submit" value="Проверить" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section partners">
+      <div class="wrapper">
+        <h2>Партнеры сервиса</h2>
+        <div class="partners-list">
+          <img src="./images/partners/AlfaBank.png" alt="Альфа-банк" />
+          <img src="./images/partners/WTB24.png" alt="ВТБ24" />
+          <img src="./images/partners/MIB.png" alt="Московский индустриальный банк" />
+          <img src="./images/partners/EurasianBank.png" alt="Банка Евразия" />
+          <img src="./images/partners/MasterCard.png" alt="MasterCard" />
+          <img src="./images/partners/Visa.png" alt="Visa" />
+        </div>
+      </div>
+    </div>
+    <div class="section howitworks">
+      <div class="wrapper">
+        <h3>Как пользоваться сервисом</h3>
+        <div class="content">
+          <p>Сервис “Кредитный таймер” использует современные и надежные протоколы защиты передачи данных и постоянно отслеживает изменения в направлении защиты данных, внося коррективы по мере необходимости.</p>
+          <p>Все платежи подтверждаются одноразовым паролем. Мобильные переводы требуют подтверждения с телефона — таким образом, у вас есть возможность еще раз подумать и проверить данные платежа (например, его сумму или номер адресата перевода).</p>
+          <p>Если у вас возникли вопросы, касающиеся оплаты, вы можете в любой день недели обратиться в службу поддержки клиентов Сервиса «Кредитный таймер».</p>
+          <p>Все технические данные о совершенных платежах хранятся в Сервисе и постоянно отслеживаются службой технической поддержки Сервиса.</p>
+          <p>Сервис «Кредитный таймер» отвечает современным стандартам безопасности и дорожит своими клиентами. Мы делаем все возможное, чтобы оградить вас от интернет-мошенничества, но все же советуем быть внимательными, когда вопрос касается ваших денег.</p>
+          <p>При возникновении вопросов вы можете обратиться в Поддержку пользователей сервиса “Кредитный таймер”.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section certificates">
+      <div class="wrapper">
+        <div class="certificates-list">
+          <div class="certificates-item">
+            <img src="./images/certificates/mastercard.png" alt="" />
+          </div>
+          <div class="certificates-item">
+            <img src="./images/certificates/thawte.png" alt="" />
+          </div>
+          <div class="certificates-item">
+            <img src="./images/certificates/pci.png" alt="" />
+          </div>
+          <div class="certificates-item">
+            <img src="./images/certificates/visa.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="wrapper">
+        <div class="footer-container">
+          <ul class="footer-nav">
+            <li><a href="faq.html">О сервисе</a></li>
+            <li><a href="faq.html">Оферта</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+          <div class="footer-contacts">
+            <div class="footer-contacts_phone">8 (800) 555-3115</div>
+            <div>info@paymo.ru</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/build.js"></script>
+  </body>
+</html>
