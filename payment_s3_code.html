@@ -147,14 +147,14 @@
                   <div class="field field__card-number">
                     <label for="cardNumber">Номер карты:</label>
                     <div class="field-input">
-                      <input type="tel" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" minLength="13" maxLength="23" data-val="true" data-val-required data-val-luhn= data-val-minlength/>
+                      <input type="tel" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" minLength="13" maxLength="23" data-val="true" data-val-required data-val-luhn data-val-minlength/>
                     </div>
                   </div>
           
                   <div class="field field__card-holder">
                     <label for="cardHolder">Имя и фамилия (как указано на карте):</label>
                     <div class="field-input">
-                      <input type="text" name="cardHolder" id="cardHolder" placeholder="VALERIAN ANTONOV"  />
+                      <input type="text" name="cardHolder" id="cardHolder" placeholder="VALERIAN ANTONOV" data-val="true" data-val-required data-val-regex data-val-regex-pattern="[a-zA-Z\-\_\s]*" />
                     </div>
                   </div>
           
