@@ -42,7 +42,7 @@
     <div class="header">
       <div class="menu-button"></div>
       <a href="index.html" class="header-logo"></a>
-      <div id="carousel" class="carousel slide" data-ride="carousel">
+      <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
           <li data-target="#carousel" data-slide-to="1"></li>
@@ -92,10 +92,10 @@
           <h2>Оплата банковской картой</h2>
 
           <div class="field-group">
-            <div class="field field__middle">
+            <div class="field field__middle field__phone">
               <label for="phoneNumber">Ваш номер телефона:</label>
               <div class="field-input">
-                <input type="tel" name="phoneNumber" placeholder="+7 (000) 000-00-00" data-val="true" data-val-required="Введите номер телефона" data-val-regex="Введене неверный номер телефона" data-val-regex-pattern="^(\+?7|8)\d{10}$"/>
+                <input id="phone" type="text" name="phoneNumber" placeholder="+7 (000) 000-00-00" data-val="true" data-val-required="Введите номер телефона" data-val-regex="Введене неверный номер телефона" data-val-regex-pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"/>
               </div>
               <div class="field-error" data-valmsg-for="phoneNumber" data-valmsg-replace="true"></div>
               <div class="field-description">
@@ -106,7 +106,7 @@
             <div class="field field__middle">
               <label for="email">Ваш email:</label>
               <div class="field-input">
-                <input type="text" name="email" placeholder="ivanpetrov@gmail.com" data-val="true" data-val-required="Введите e-mail" data-val-email="Введен неверный e-mail"/>
+                <input type="text" name="email" placeholder="ivanpetrov@gmail.com" data-val="true" data-val-email="Введен неверный e-mail"/>
               </div>
               <div class="field-error" data-valmsg-for="email" data-valmsg-replace="true"></div>
               <div class="field-description">
@@ -151,42 +151,46 @@
                     </div>
                   </div>
           
-                  <div class="field">
+                  <div class="field field__card-holder">
                     <label for="cardHolder">Имя и фамилия (как указано на карте):</label>
                     <div class="field-input">
-                      <input type="text" name="cardHolder" id="cardHolder" placeholder="VALERIAN ANTONOV" />
+                      <input type="text" name="cardHolder" id="cardHolder" placeholder="VALERIAN ANTONOV"  />
                     </div>
                   </div>
           
-                  <div class="field field__inline">
+                  <div class="field field__inline field__expiredate">
                     <label>Срок действия:</label>
                     <div class="field-input">
-                      <select name="" title="Месяц">
-                        <option value="">Январь</option>
-                        <option value="">Февраль</option>
-                        <option value="">Март</option>
-                        <option value="">Апрель</option>
-                        <option value="">Май</option>
-                        <option value="">Июнь</option>
-                        <option value="">Июль</option>
-                        <option value="">Август</option>
-                        <option value="">Сентябрь</option>
-                        <option value="">Октябрь</option>
-                        <option value="">Ноябрь</option>
-                        <option value="">Декабрь</option>
+                    <div class="field field__expiredate-month">
+                      <select name="expireDateMonth" title="Месяц" data-val="true" data-val-required>
+                        <option value="01">Январь</option>
+                        <option value="02">Февраль</option>
+                        <option value="03">Март</option>
+                        <option value="04">Апрель</option>
+                        <option value="05">Май</option>
+                        <option value="06">Июнь</option>
+                        <option value="07">Июль</option>
+                        <option value="08">Август</option>
+                        <option value="09">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
                       </select>
-                      <select name="" title="Год">
-                        <option value="">2016</option>
-                        <option value="">2015</option>
-                        <option value="">2014</option>
-                        <option value="">2013</option>
-                        <option value="">2012</option>
-                        <option value="">2011</option>
-                        <option value="">2010</option>
-                        <option value="">2009</option>
-                        <option value="">2008</option>
-                        <option value="">2007</option>
+                    </div>
+                    <div class="field field__expiredate-year">
+                      <select name="expireDateYear" title="Год" data-val="true" data-val-required>
+                        <option value="16">2016</option>
+                        <option value="15">2015</option>
+                        <option value="14">2014</option>
+                        <option value="13">2013</option>
+                        <option value="12">2012</option>
+                        <option value="11">2011</option>
+                        <option value="10">2010</option>
+                        <option value="09">2009</option>
+                        <option value="08">2008</option>
+                        <option value="07">2007</option>
                       </select>
+                    </div>
                     </div>
                   </div>
                 </div>
